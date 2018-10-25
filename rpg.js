@@ -101,6 +101,14 @@ function jeu() {
     
     
     function combat(){    //Fonction du combat
+        
+        var noms = [1, Melanie, Titouan, Freddy];
+        random = Math.ceil(Math.random() * 4);
+        monstre.Mnom = noms[random];
+
+        var sprite = [1, 'riri', 'fifi', 'loulou'];
+        random1 = Math.ceil(Math.random() * 4);
+        var imgMonstre = sprite[random];
 
         monstre.Mvie = monstre.Mend; //Remet la vie du monstre au max (endurance)
 
