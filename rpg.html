@@ -1,1 +1,78 @@
-# rpg
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RPG</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id=creation>
+        <input id="persoNom" type="text" placeholder="Nom">
+        <button id="btndemarrage">Démarrer la partie</button>
+    </div>
+
+    <div id=caracteristique>
+        <h1>Caractéristique</h1>
+            <p>Nom : <input type="text" id="nom" value="" readonly></p>
+            <p>Force : <input type="text" id="force" value="" readonly></p>
+            <p>Agilité : <input type="text" id="agilite" value="" readonly></p>
+            <p>Endurance : <input type="text" id="endurance" value="" readonly></p>
+            <p>Vie : <input type="text" id="vie" value="" readonly></p>
+            <p>Or : <input type="text" id="or" value="" readonly></p>    
+    </div>
+
+    <div id=aventure>
+        <h1>Combat</h1>
+        Vie du personnage : <input type="text" id="Pvie" value="" readonly></p>
+        Vie du monstre : <input type="text" id="Mvie" value="" readonly></p>
+        <button id="btnattaquer">Attaquer !</button>
+        <div id=win>
+            <p>Vous avez remporté ce combat.</p>
+            <button id="btnboutique">Aller à la boutique</button>
+        </div>
+    </div>
+
+    <div id=boutique>
+        <h1>Boutique</h1>
+        <button id="btnPoFo">Potion de force-2PO</button>
+        <button id="btnPoAg">Potion d'agilité-2PO</button>
+        <button id="btnPoEn">Potion d'endurance-2PO</button>
+        <button id="btnPoVi">Potion de Vie-5PO</button>
+        <button id="btninventaire">Quitter la boutique</button>
+    </div>
+
+    <div id=inventaire>
+        <h1>Inventaire</h1>
+        <div id='potion'>
+            Potion de force : 
+            <input type="text" id="nbPoFo" value="" readonly></p>
+            <button id="UtilPoFo">Utiliser</button>
+        </div>
+        <div id='potion'>
+            Potion d'agilité : 
+            <input type="text" id="nbPoAg" value="" readonly></p>
+            <button id="UtilPoAg">Utiliser</button>
+        </div>
+        <div id='potion'>
+                Potion d'endurance : 
+                <input type="text" id="nbPoEn" value="" readonly></p>
+                <button id="UtilPoEn">Utiliser</button>
+            </div>
+        <div id='potion'>
+                Potion de vie : 
+                <input type="text" id="nbPoVi" value="" readonly></p>
+                <button id="UtilPoVi">Utiliser</button>
+        </div>
+        <button id="btncombat">Retourner au combat</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+
+</html>
