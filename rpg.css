@@ -1,1 +1,40 @@
+body{
+    width : 75%;
+    background-color: rgb(114, 134, 143);
+    display : flex;
+}
 
+
+#creation{
+    border-style: solid;
+    border-width: 5px;
+}
+#caracteristique{
+    width:240px;
+    border-style: solid;
+    border-width: 5px;
+    float : left;
+    display : none;
+}
+
+#aventure{
+    background-color: lightgreen;
+    width : 400px;
+    display : none;
+}
+
+#boutique{
+    background-color: rgb(235, 235, 98);
+    width : 400px;
+    display : none ;
+
+}
+
+#inventaire{
+    background-color: lightcoral;
+    width : 400px;
+    display : none;
+}
+#win{
+    display : none;
+}
