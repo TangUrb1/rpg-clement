@@ -48,8 +48,49 @@ function jeu() {
     document.getElementById('endurance').value = perso.Pend ;
     document.getElementById('or').value = perso.Por ;
 
+    
+    //Cycle Jour-Nuit
 
+    jourNuit();
 
+    function jourNuit(){
+
+        document.getElementById('journuit').innerHTML = 'Jour' ;               
+
+        
+        function timerNuit(){                                                   //Cette fonction va appeler la fonction suivante
+            var timerNuit;
+
+            if (timerNuit){
+                clearInterval(timerNuit);
+            }
+
+            timerNuit = setInterval(function(){
+                document.getElementById('journuit').innerHTML = 'Nuit';
+                monstre.Mfor++;
+                clearInterval(timerNuit);
+                timerJour();
+            }, 5000)
+        }
+        
+        function timerJour(){                                                   //Cette fonction va appeler la fonction précédente
+            var timerJour;
+
+            if(timerJour){
+                clearInterval(timerJour);
+            }
+
+            timerJour = setInterval(function(){
+                document.getElementById('journuit').innerHTML = 'Jour';
+                monstre.Mfor--;
+                clearInterval(timerJour);
+                timerNuit();
+            }, 5000);
+        }
+
+        timerNuit();                                                            //On appelle la première fonction pour lancer la boucle
+
+    }
 
 
     combat();//Lance le premier combat
